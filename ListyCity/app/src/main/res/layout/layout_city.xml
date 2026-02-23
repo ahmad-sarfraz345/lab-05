@@ -5,14 +5,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cityLayout"
     android:padding="10dp">
+
     <TextView
+        android:id="@+id/textCityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="City Name"
-        android:id="@+id/textCityName"
         android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textDeleteHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Tap to edit)"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/textCityName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#E53935"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/textCityProvince"
@@ -20,9 +44,9 @@
         android:layout_height="wrap_content"
         android:text="Province"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/buttonDelete"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
